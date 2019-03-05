@@ -4,6 +4,17 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
+
+GET     /onsale                     controllers.HomeController.onsale(cat:Long?=0L)
+GET     /about                      controllers.HomeController.about
+
+
+GET     /addItem                    controllers.HomeController.addItem
+
+POST    /addItemSubmit              controllers.HomeController.addItemSubmit
+
+GET     /deleteItem/:id             controllers.HomeController.deleteItem(id: Long)
+GET     /updateItem/:id             controllers.HomeController.updateItem(id: Long)
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
@@ -12,6 +23,4 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /onsale                           controllers.HomeController.onsale
-
-GET     /about                            controllers.HomeController.about
+GET	/login			    controllers.LoginController.Login
